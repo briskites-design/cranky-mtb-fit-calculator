@@ -913,7 +913,7 @@ function AddModal({onAdd,onClose}) {
             fontWeight:700,color:"white",cursor:"pointer"}}>Save to Database</button>
         </div>
         <p style={{fontSize:"11px",color:C.txtDim,marginTop:"12px",lineHeight:1.5}}>
-          Use <strong>Export JSON</strong> from the toolbar to download this bike for submission to the verified database.
+          Use the <strong>+ Add Bike</strong> button to add more bikes. Submitted bikes can be reviewed and added to the verified database.
         </p>
       </div>
     </div>
@@ -1304,24 +1304,18 @@ export default function App() {
       <header style={{background:"white",borderBottom:`3px solid ${C.teal}`,padding:"0 20px",height:"50px",
         display:"flex",alignItems:"center",justifyContent:"space-between",gap:"12px",
         boxShadow:"0 1px 8px rgba(0,0,0,0.06)"}}>
-        <div style={{display:"flex",alignItems:"center",gap:"12px"}}>
-          <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
+        <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
             <div style={{width:"28px",height:"28px",background:`linear-gradient(135deg,${C.teal},${C.tealDark})`,
               borderRadius:"8px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"14px"}}>⛰</div>
             <span style={{fontSize:"16px",fontWeight:900,letterSpacing:"-0.01em",color:C.txt}}>
               MTB Fit + Handling
             </span>
           </div>
-          <span style={{background:C.tealLight,border:`1px solid ${C.tealMid}`,borderRadius:"5px",
-            padding:"1px 8px",fontSize:"10px",color:C.tealDark,fontFamily:"DM Mono,monospace",fontWeight:600}}>
-            v6
-          </span>
-        </div>
         <div style={{display:"flex",gap:"7px"}}>
           <button onClick={()=>setModal(true)} style={{...btnSm(true),background:`linear-gradient(135deg,${C.teal},${C.tealDark})`,border:"none",padding:"6px 14px",fontSize:"12px"}}>
             + Add Bike
           </button>
-          {[["Export JSON",exportBike],["Reset",()=>{setBikeA(makeBike(db[0]));setBikeB(makeBike(db[1]));setRider(DEF_RIDER);}]].map(([l,fn])=>(
+          {[["Reset",()=>{setBikeA(makeBike(db[0]));setBikeB(makeBike(db[1]));setRider(DEF_RIDER);}]].map(([l,fn])=>(
             <button key={l} onClick={fn} style={{...btnSm(false),padding:"6px 12px",fontSize:"11px"}}>{l}</button>
           ))}
         </div>
@@ -1824,7 +1818,16 @@ export default function App() {
               </div>
             ))}
 
-            {/* Quick comparison if Both selected */}
+            {/* Add bike action */}
+            <button onClick={()=>setModal(true)} style={{
+              background:`linear-gradient(135deg,${C.teal},${C.tealDark})`,
+              border:"none",borderRadius:"10px",padding:"12px",
+              color:"white",fontSize:"13px",fontWeight:800,cursor:"pointer",fontFamily:"inherit"}}>
+              + Add a Bike
+            </button>
+            <div style={{fontSize:"10px",color:C.txtDim,lineHeight:1.5,padding:"0 2px"}}>
+              Your bike not listed? Add it manually or import from a JSON file.
+            </div>
             {showB&&(
               <div style={{background:C.bgCard,border:`1px solid ${C.border}`,borderRadius:"12px",overflow:"hidden"}}>
                 <div style={{padding:"10px 12px",background:C.bgMuted,fontSize:"11px",fontWeight:800,color:C.txtMid,
@@ -1875,12 +1878,19 @@ export default function App() {
                 </span>
               </div>
               {(showB
-                ?[["frame","Frame"],["dimensions","Dim"],["cockpitCompare","Cockpit"]]
-                :[["frame","Frame"],["dimensions","Dim"],["balance","Balance"]]
+                ?[["frame","Frame"],["cockpitCompare","Cockpit"]]
+                :[["frame","Frame"],["balance","Balance"]]
               ).map(([v,l])=>(
                 <button key={v} onClick={()=>setVm(v)} style={{...btnSm(vm===v),padding:"5px 10px",fontSize:"11px"}}>{l}</button>
               ))}
             </div>
+            {/* Dim mode note on mobile */}
+            {vm==="dimensions"&&(
+              <div style={{background:C.bgMuted,padding:"6px 12px",fontSize:"10px",color:C.txtDim,
+                borderBottom:`1px solid ${C.border}`}}>
+                💡 Dimension labels are easier to read on a wider screen. Key values are shown in the cards below.
+              </div>
+            )}
 
             {/* SVG diagram */}
             {vm!=="cockpitCompare"&&(
@@ -2022,9 +2032,12 @@ export default function App() {
 
       {/* ── Mobile bottom nav ── */}
       <nav className="mobile-nav">
-        {[["bikes","🚲","Bikes"],["diagram","📐","Diagram"],["fit","📏","Fit"],["setup","⚙️","Setup"]].map(([pane,icon,label])=>(
+        {[["bikes","🚴","Bikes"],["diagram","📐","Diagram"],["fit","📏","Fit"],["setup","⚙️","Setup"]].map(([pane,icon,label])=>(
           <button key={pane} className={mobilePane===pane?"mob-active":""}
-            onClick={()=>setMobilePane(pane)}>
+            onClick={()=>{
+              setMobilePane(pane);
+              if(pane==="diagram") setVm("frame"); // default to clean frame view on mobile
+            }}>
             <span className="nav-icon">{icon}</span>
             {label}
           </button>
