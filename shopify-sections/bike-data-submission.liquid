@@ -1,160 +1,161 @@
-{{ 'dropper-fit-finder.css' | asset_url | stylesheet_tag }}
+<div id="bds-wrap" style="max-width:640px;margin:40px auto;padding:0 16px;font-family:inherit;">
+  <div style="background:#fff;border:1px solid #e2e4e8;border-radius:12px;padding:24px;">
+    <h2 style="margin:0 0 8px;font-size:18px;font-weight:700;">Submit your bike's frame measurements</h2>
+    <p style="margin:0 0 20px;font-size:14px;color:#4a4a52;">Help other riders by sharing verified measurements. Your submission will be reviewed before being added to the database.</p>
 
-<section class="dff-shell" style="max-width:640px;margin:40px auto;padding:0 16px;">
-  <div class="dff-panel">
-    <h2 class="dff-panel-title">Submit your bike's frame measurements</h2>
-    <p class="dff-panel-intro">Help other riders by sharing verified measurements for your bike. Your submission will be reviewed before being added to the database.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
 
-    <div id="bds-form">
-      <div class="dff-field-grid">
-        <div>
-          <label class="dff-label" for="bds-brand">Brand *</label>
-          <input id="bds-brand" class="dff-input" type="text" placeholder="e.g. Specialized">
-        </div>
-        <div>
-          <label class="dff-label" for="bds-model">Model *</label>
-          <input id="bds-model" class="dff-input" type="text" placeholder="e.g. Turbo Levo">
-        </div>
-        <div>
-          <label class="dff-label" for="bds-year">Year</label>
-          <input id="bds-year" class="dff-input" type="number" placeholder="e.g. 2024" min="2015" max="2030">
-        </div>
-        <div>
-          <label class="dff-label" for="bds-size">Size *</label>
-          <input id="bds-size" class="dff-input" type="text" placeholder="e.g. L or S4">
-        </div>
-        <div>
-          <label class="dff-label" for="bds-diameter">Seatpost diameter (mm)</label>
-          <select id="bds-diameter" class="dff-select">
-            <option value="">Unknown</option>
-            <option value="27.2">27.2</option>
-            <option value="30.9">30.9</option>
-            <option value="31.6">31.6</option>
-            <option value="34.9">34.9</option>
-          </select>
-        </div>
-        <div>
-          <label class="dff-label" for="bds-insertion">Max insertion depth (mm)</label>
-          <div class="dff-unit-field">
-            <input id="bds-insertion" class="dff-input" type="number" placeholder="e.g. 280">
-            <span class="dff-unit">mm</span>
-          </div>
-        </div>
-        <div class="dff-field-full">
-          <label class="dff-label" for="bds-collar">BB to seat collar (mm)</label>
-          <div class="dff-unit-field">
-            <input id="bds-collar" class="dff-input" type="number" placeholder="e.g. 450">
-            <span class="dff-unit">mm</span>
-          </div>
-        </div>
-        <div>
-          <label class="dff-label" for="bds-confidence">How did you measure?</label>
-          <select id="bds-confidence" class="dff-select">
-            <option value="owner_measured">I measured it myself</option>
-            <option value="workshop_verified">Bike shop / workshop</option>
-            <option value="manufacturer">From manufacturer specs</option>
-            <option value="estimated">Estimated</option>
-          </select>
-        </div>
-        <div>
-          <label class="dff-label" for="bds-name">Your name (optional)</label>
-          <input id="bds-name" class="dff-input" type="text" placeholder="First name or username">
-        </div>
-        <div>
-          <label class="dff-label" for="bds-email">Email (optional, not published)</label>
-          <input id="bds-email" class="dff-input" type="email" placeholder="For follow-up only">
-        </div>
-        <div class="dff-field-full">
-          <label class="dff-label" for="bds-notes">Notes</label>
-          <textarea id="bds-notes" class="dff-input" rows="3" placeholder="Any notes about how you measured, frame conditions, dropper posts you know fit, etc."></textarea>
-        </div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-brand">Brand *</label>
+        <input id="bds-brand" type="text" placeholder="e.g. Specialized" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
       </div>
 
-      <div style="margin-top:16px;">
-        <button id="bds-submit" type="button" class="dff-tab is-active" style="width:100%;padding:12px;font-size:14px;">
-          Submit measurements
-        </button>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-model">Model *</label>
+        <input id="bds-model" type="text" placeholder="e.g. Turbo Levo" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
       </div>
 
-      <div id="bds-status" style="margin-top:12px;display:none;"></div>
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-year">Year</label>
+        <input id="bds-year" type="number" placeholder="e.g. 2024" min="2015" max="2030" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-size">Size *</label>
+        <input id="bds-size" type="text" placeholder="e.g. L or S4" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-diameter">Seatpost diameter (mm)</label>
+        <select id="bds-diameter" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;background:#fff;">
+          <option value="">Unknown</option>
+          <option value="27.2">27.2</option>
+          <option value="30.9">30.9</option>
+          <option value="31.6">31.6</option>
+          <option value="34.9">34.9</option>
+        </select>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-insertion">Max insertion depth (mm)</label>
+        <input id="bds-insertion" type="number" placeholder="e.g. 280" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
+      </div>
+
+      <div style="grid-column:1/-1;">
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-collar">BB to seat collar (mm)</label>
+        <input id="bds-collar" type="number" placeholder="e.g. 450" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-confidence">How did you measure?</label>
+        <select id="bds-confidence" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;background:#fff;">
+          <option value="owner_measured">I measured it myself</option>
+          <option value="workshop_verified">Bike shop / workshop</option>
+          <option value="manufacturer">From manufacturer specs</option>
+          <option value="estimated">Estimated</option>
+        </select>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-name">Your name (optional)</label>
+        <input id="bds-name" type="text" placeholder="First name or username" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
+      </div>
+
+      <div style="grid-column:1/-1;">
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-email">Email (optional, not published)</label>
+        <input id="bds-email" type="email" placeholder="For follow-up only" style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;">
+      </div>
+
+      <div style="grid-column:1/-1;">
+        <label style="display:block;font-size:12px;font-weight:600;margin-bottom:4px;" for="bds-notes">Notes</label>
+        <textarea id="bds-notes" rows="3" placeholder="Any notes about how you measured, dropper posts you know fit, etc." style="width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #c8ccd4;border-radius:6px;font-size:14px;resize:vertical;"></textarea>
+      </div>
+
     </div>
+
+    <button id="bds-submit" type="button" style="margin-top:16px;width:100%;padding:12px;background:#1a1a1a;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;">
+      Submit measurements
+    </button>
+
+    <div id="bds-status" style="display:none;margin-top:12px;padding:12px;border-radius:8px;font-size:14px;"></div>
   </div>
-</section>
+</div>
 
 <script>
 (function() {
-  const SUPABASE_URL = 'https://nlhopparlchwyunehhyl.supabase.co';
-  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5saG9wcGFybGNod3l1bmVoaHlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwMzA0MjEsImV4cCI6MjA5NTYwNjQyMX0.vdH8zei0dA8kbRgVUFUCGhW7GQMIFsGSNz3fw4uA1LA';
+  var SUPABASE_URL = 'https://nlhopparlchwyunehhyl.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5saG9wcGFybGNod3l1bmVoaHlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwMzA0MjEsImV4cCI6MjA5NTYwNjQyMX0.vdH8zei0dA8kbRgVUFUCGhW7GQMIFsGSNz3fw4uA1LA';
 
   function val(id) {
-    const el = document.getElementById(id);
+    var el = document.getElementById(id);
     return el ? el.value.trim() : '';
   }
 
   function showStatus(msg, ok) {
-    const el = document.getElementById('bds-status');
+    var el = document.getElementById('bds-status');
     el.style.display = 'block';
-    el.className = 'dff-alert dff-alert--' + (ok ? 'good' : 'warn');
+    el.style.background = ok ? '#d1fae5' : '#fef3c7';
+    el.style.color = ok ? '#065f46' : '#92400e';
     el.innerHTML = msg;
   }
 
-  document.getElementById('bds-submit').addEventListener('click', async function() {
-    const brand = val('bds-brand');
-    const model = val('bds-model');
-    const size  = val('bds-size');
+  var btn = document.getElementById('bds-submit');
+  if (!btn) return;
+
+  btn.addEventListener('click', function() {
+    var brand = val('bds-brand');
+    var model = val('bds-model');
+    var size  = val('bds-size');
 
     if (!brand || !model || !size) {
       showStatus('Please fill in Brand, Model and Size at minimum.', false);
       return;
     }
 
-    const btn = document.getElementById('bds-submit');
     btn.textContent = 'Submitting…';
     btn.disabled = true;
 
-    const payload = {
-      brand,
-      model,
-      year:                    val('bds-year')      ? parseInt(val('bds-year'))      : null,
-      size,
-      seat_tube_diameter_mm:   val('bds-diameter')  ? parseFloat(val('bds-diameter')): null,
-      max_insertion_mm:        val('bds-insertion') ? parseFloat(val('bds-insertion')): null,
-      bb_to_collar_mm:         val('bds-collar')    ? parseFloat(val('bds-collar'))  : null,
+    var payload = {
+      brand: brand,
+      model: model,
+      year:  val('bds-year') ? parseInt(val('bds-year')) : null,
+      size:  size,
+      seat_tube_diameter_mm:    val('bds-diameter')  ? parseFloat(val('bds-diameter'))  : null,
+      max_insertion_mm:         val('bds-insertion') ? parseFloat(val('bds-insertion')) : null,
+      bb_to_collar_mm:          val('bds-collar')    ? parseFloat(val('bds-collar'))    : null,
       insertion_data_confidence: val('bds-confidence') || 'owner_measured',
-      submitter_name:          val('bds-name')  || null,
-      submitter_email:         val('bds-email') || null,
-      notes:                   val('bds-notes') || null,
-      status:                  'pending'
+      submitter_name:  val('bds-name')  || null,
+      submitter_email: val('bds-email') || null,
+      notes:           val('bds-notes') || null,
+      status: 'pending'
     };
 
-    try {
-      const resp = await fetch(SUPABASE_URL + '/rest/v1/bike_submissions', {
-        method: 'POST',
-        headers: {
-          'apikey': SUPABASE_KEY,
-          'Authorization': 'Bearer ' + SUPABASE_KEY,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify(payload)
-      });
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', SUPABASE_URL + '/rest/v1/bike_submissions', true);
+    xhr.setRequestHeader('apikey', SUPABASE_KEY);
+    xhr.setRequestHeader('Authorization', 'Bearer ' + SUPABASE_KEY);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Prefer', 'return=minimal');
 
-      if (resp.ok || resp.status === 201) {
-        showStatus('✅ Thanks! Your measurements have been submitted for review. We'll add them to the database once verified.', true);
-        document.getElementById('bds-form').querySelectorAll('input, select, textarea').forEach(el => el.value = '');
+    xhr.onload = function() {
+      if (xhr.status === 200 || xhr.status === 201) {
+        showStatus('✅ Thanks! Your measurements have been submitted for review.', true);
+        document.querySelectorAll('#bds-wrap input, #bds-wrap select, #bds-wrap textarea').forEach(function(el) { el.value = ''; });
       } else {
-        const err = await resp.text();
-        showStatus('Something went wrong (' + resp.status + '). Please try again.', false);
-        console.error('Submission error:', err);
+        showStatus('Something went wrong (' + xhr.status + '). Please try again.', false);
+        console.error('Submission error:', xhr.responseText);
       }
-    } catch(e) {
-      showStatus('Could not connect. Please check your internet and try again.', false);
-      console.error(e);
-    } finally {
       btn.textContent = 'Submit measurements';
       btn.disabled = false;
-    }
+    };
+
+    xhr.onerror = function() {
+      showStatus('Could not connect. Please check your internet and try again.', false);
+      btn.textContent = 'Submit measurements';
+      btn.disabled = false;
+    };
+
+    xhr.send(JSON.stringify(payload));
   });
 })();
 </script>
-
