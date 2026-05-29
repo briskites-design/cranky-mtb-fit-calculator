@@ -1,0 +1,79 @@
+{
+    "_metadata": {
+          "version": "1.2.0",
+          "created": "2026-05-01",
+          "last_updated": "2026-05-29",
+          "category": "EMTB",
+          "description": "E-MTB geometry database — all measurements in mm and degrees unless noted."
+    },
+    "bikes": [
+          {
+                  "id": "canyon_spectral_on_cf_2022_mx_low",
+                  "brand": "Canyon",
+                  "model": "Spectral:ON CF",
+                  "generation": "Gen 1",
+                  "years": [2022, 2025, 2026],
+                  "category": "EMTB",
+                  "motor": "Shimano EP801",
+                  "motor_nm": 85,
+                  "battery_wh_default": 800,
+                  "wheel_config": "29-27.5",
+                  "suspension_travel_rear_mm": 155,
+                  "suspension_travel_fork_mm": 160,
+                  "chainstay_length_mm": 437,
+                  "fork_offset_mm": 44,
+                  "data_confidence": "medium",
+                  "sizes": [
+                            { "size": "S", "height_range_cm": [155, 170], "reach": 435, "stack": null, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "bb_height": 334 },
+                            { "size": "M", "height_range_cm": [165, 180], "reach": 460, "stack": null, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "bb_height": 334 },
+                            { "size": "L", "height_range_cm": [175, 190], "reach": 485, "stack": 652, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "wheelbase": 1252, "bb_height": 334 },
+                            { "size": "XL", "height_range_cm": [185, 200], "reach": 510, "stack": null, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "bb_height": 334 }
+                  ]
+          },
+          {
+                  "id": "scott_patron_eride_gen1_2022_29_standard",
+                  "brand": "Scott",
+                  "model": "Patron eRIDE",
+                  "generation": "Gen 1 (2022)",
+                  "years": [2022, 2023, 2024],
+                  "category": "EMTB",
+                  "motor": "Bosch Performance Line CX",
+                  "motor_nm": 85,
+                  "battery_wh_default": 750,
+                  "wheel_config": "29",
+                  "suspension_travel_rear_mm": 160,
+                  "suspension_travel_fork_mm": 160,
+                  "chainstay_length_mm": 454,
+                  "fork_offset_mm": 44,
+                  "data_confidence": "high",
+                  "sizes": [
+                            { "size": "S", "height_range_cm": [155, 168], "reach": 433, "stack": 635, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 },
+                            { "size": "M", "height_range_cm": [165, 178], "reach": 446, "stack": 642, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 },
+                            { "size": "L", "height_range_cm": [175, 188], "reach": 474, "stack": 651, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 },
+                            { "size": "XL", "height_range_cm": [185, 198], "reach": 501, "stack": 660, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 }
+                  ]
+          },
+          {
+                  "id": "cannondale_moterra_sl_2024_mx_standard",
+                  "brand": "Cannondale",
+                  "model": "Moterra SL",
+                  "generation": "Gen 1 (2024)",
+                  "years": [2024, 2025, 2026],
+                  "category": "EMTB",
+                  "motor": "Shimano EP801",
+                  "motor_nm": 85,
+                  "battery_wh_default": 601,
+                  "wheel_config": "29-27.5",
+                  "suspension_travel_rear_mm": 150,
+                  "suspension_travel_fork_mm": 160,
+                  "fork_offset_mm": 44,
+                  "data_confidence": "high",
+                  "sizes": [
+                            { "size": "S", "height_range_cm": [155, 168], "reach": 420, "stack": 630, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 449 },
+                            { "size": "M", "height_range_cm": [165, 178], "reach": 445, "stack": 639, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 453 },
+                            { "size": "L", "height_range_cm": [175, 188], "reach": 470, "stack": 648, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 453 },
+                            { "size": "XL", "height_range_cm": [185, 198], "reach": 505, "stack": 657, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 458 }
+                  ]
+          }
+    ]
+}
