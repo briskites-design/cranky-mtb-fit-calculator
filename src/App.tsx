@@ -51,7 +51,43 @@ const DEF_COCKPIT = {
   barWidth:{value:800,status:"estimated"}, barBacksweep:{value:9,status:"estimated"},
   barUpsweep:{value:5,status:"estimated"}, barRoll:{value:0,status:"estimated"},
 };
-
+// ── External geometry database loader ─────────────────────────────
+function convertDbBike(bike: any, size: any) {
+  const s = (val: any, status = "published") =>
+    val != null ? { value: val, status } : { value: null, status: "missing" };
+  return {
+    id: `${bike.id}_${size.size}`,
+    brand: bike.brand,
+    model: `${bike.model} (${size.size})`,
+    year: bike.years?.[0] ?? 2025,
+    size: size.size,
+    category: bike.category ?? "eMTB Enduro",
+    motor: bike.motor ?? "",
+    wheelSetup: size.wheel_config_override ?? bike.wheel_config ?? "29/29",
+    verified: bike.data_confidence === "high",
+    confidenceNote: bike.notes ?? "",
+    fields: {
+      reach:                  s(size.reach),
+      stack:                  s(size.stack),
+      headAngle:              s(size.head_tube_angle),
+      headTubeLength:         s(size.head_tube_length),
+      effectiveSeatTubeAngle: s(size.seat_tube_angle_effective),
+      actualSeatTubeAngle:    { value: null, status: "missing" },
+      seatTubeLength:         s(size.seat_tube_length),
+      chainstay:              s(size.chainstay_length),
+      wheelbase:              s(size.wheelbase),
+      bbHeight:               s(size.bb_height),
+      bbDrop:                 s(size.bb_drop),
+      forkTravel:             s(bike.suspension_travel_fork_mm),
+      forkOffset:             s(size.fork_offset ?? bike.fork_offset_mm),
+      headset:                { value: 15, status: "estimated" },
+      anglesetOffset:         { value: 0, status: "estimated" },
+      frontWheelDiameter:     s(size.wheel_config_override === "27.5" ? 699 : 749),
+      rearWheelDiameter:      s(bike.wheel_config?.includes("27.5") ? 699 : 749),
+      bikeWeight:             { value: null, status: "missing" },
+    },
+  };
+}
 const INIT_DB = [
   { id:"zendit-rr-ml", brand:"Mondraker", model:"Zendit RR", year:2027, size:"M/L",
     category:"eMTB Enduro", motor:"DJI Avinox", wheelSetup:"29/27.5", verified:false,
@@ -1198,6 +1234,21 @@ function CockpitRealityCard({bike}) {
 
 export default function App() {
   const [db,setDb]       = useState(INIT_DB);
+  useEffect(() => {
+    fetch("/emtb-database.json")
+      .then(r => r.json())
+      .then(data => {
+        const converted = data.bikes.flatMap((bike: any) =>
+          bike.sizes.map((size: any) => convertDbBike(bike, size))
+        );
+        setDb(prev => {
+          const existingIds = new Set(prev.map((b: any) => b.id));
+          const newBikes = converted.filter((b: any) => !existingIds.has(b.id));
+          return [...prev, ...newBikes];
+        });
+      })
+      .catch(err => console.warn("Could not load external bike DB:", err));
+  }, []);
   const [rider,setRider] = useState(DEF_RIDER);
   // Track last auto-calculated saddle height — if user hasn't deviated, keep in sync with inseam
   const lastCalcSaddle = useRef(calcSaddleHeight(DEF_RIDER.inseamCm));
