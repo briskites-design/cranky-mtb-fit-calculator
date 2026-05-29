@@ -1,79 +1,2763 @@
 {
-    "_metadata": {
-          "version": "1.2.0",
-          "created": "2026-05-01",
-          "last_updated": "2026-05-29",
-          "category": "EMTB",
-          "description": "E-MTB geometry database — all measurements in mm and degrees unless noted."
+  "_metadata": {
+    "version": "1.2.0",
+    "created": "2026-05-01",
+    "last_updated": "2026-05-29",
+    "category": "EMTB",
+    "description": "E-MTB geometry database — all measurements in mm and degrees unless noted.",
+    "data_confidence_key": {
+      "high": "Data sourced directly from manufacturer website",
+      "medium": "Data cross-referenced from multiple reliable review sources",
+      "low": "Data from single review source or estimated — verify before use"
     },
-    "bikes": [
-          {
-                  "id": "canyon_spectral_on_cf_2022_mx_low",
-                  "brand": "Canyon",
-                  "model": "Spectral:ON CF",
-                  "generation": "Gen 1",
-                  "years": [2022, 2025, 2026],
-                  "category": "EMTB",
-                  "motor": "Shimano EP801",
-                  "motor_nm": 85,
-                  "battery_wh_default": 800,
-                  "wheel_config": "29-27.5",
-                  "suspension_travel_rear_mm": 155,
-                  "suspension_travel_fork_mm": 160,
-                  "chainstay_length_mm": 437,
-                  "fork_offset_mm": 44,
-                  "data_confidence": "medium",
-                  "sizes": [
-                            { "size": "S", "height_range_cm": [155, 170], "reach": 435, "stack": null, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "bb_height": 334 },
-                            { "size": "M", "height_range_cm": [165, 180], "reach": 460, "stack": null, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "bb_height": 334 },
-                            { "size": "L", "height_range_cm": [175, 190], "reach": 485, "stack": 652, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "wheelbase": 1252, "bb_height": 334 },
-                            { "size": "XL", "height_range_cm": [185, 200], "reach": 510, "stack": null, "head_tube_angle": 65.5, "seat_tube_angle_effective": 76.5, "chainstay_length": 437, "bb_height": 334 }
-                  ]
-          },
-          {
-                  "id": "scott_patron_eride_gen1_2022_29_standard",
-                  "brand": "Scott",
-                  "model": "Patron eRIDE",
-                  "generation": "Gen 1 (2022)",
-                  "years": [2022, 2023, 2024],
-                  "category": "EMTB",
-                  "motor": "Bosch Performance Line CX",
-                  "motor_nm": 85,
-                  "battery_wh_default": 750,
-                  "wheel_config": "29",
-                  "suspension_travel_rear_mm": 160,
-                  "suspension_travel_fork_mm": 160,
-                  "chainstay_length_mm": 454,
-                  "fork_offset_mm": 44,
-                  "data_confidence": "high",
-                  "sizes": [
-                            { "size": "S", "height_range_cm": [155, 168], "reach": 433, "stack": 635, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 },
-                            { "size": "M", "height_range_cm": [165, 178], "reach": 446, "stack": 642, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 },
-                            { "size": "L", "height_range_cm": [175, 188], "reach": 474, "stack": 651, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 },
-                            { "size": "XL", "height_range_cm": [185, 198], "reach": 501, "stack": 660, "head_tube_angle": 65.0, "seat_tube_angle_effective": 76.9, "chainstay_length": 454, "bb_height": 347, "bb_drop": 30 }
-                  ]
-          },
-          {
-                  "id": "cannondale_moterra_sl_2024_mx_standard",
-                  "brand": "Cannondale",
-                  "model": "Moterra SL",
-                  "generation": "Gen 1 (2024)",
-                  "years": [2024, 2025, 2026],
-                  "category": "EMTB",
-                  "motor": "Shimano EP801",
-                  "motor_nm": 85,
-                  "battery_wh_default": 601,
-                  "wheel_config": "29-27.5",
-                  "suspension_travel_rear_mm": 150,
-                  "suspension_travel_fork_mm": 160,
-                  "fork_offset_mm": 44,
-                  "data_confidence": "high",
-                  "sizes": [
-                            { "size": "S", "height_range_cm": [155, 168], "reach": 420, "stack": 630, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 449 },
-                            { "size": "M", "height_range_cm": [165, 178], "reach": 445, "stack": 639, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 453 },
-                            { "size": "L", "height_range_cm": [175, 188], "reach": 470, "stack": 648, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 453 },
-                            { "size": "XL", "height_range_cm": [185, 198], "reach": 505, "stack": 657, "head_tube_angle": 62.5, "seat_tube_angle_effective": 77.0, "chainstay_length": 458 }
-                  ]
-          }
+    "brands": [
+      "Cannondale",
+      "Canyon",
+      "Scott"
     ]
+  },
+  "bikes": [
+    {
+      "id": "specialized_turbo_levo_gen3_2023_mx_low",
+      "brand": "Specialized",
+      "model": "Turbo Levo",
+      "generation": "Gen 3",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Specialized Turbo Full Power 2.2",
+      "motor_nm": 90,
+      "battery_wh_default": 700,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "chainstay_length_mm": 442,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Gen 3 geometry unchanged 2023-2024. HTA adjustable 63.0-65.5 via headset cups. BB height ±7mm via flip chip.",
+      "sizes": [
+        {
+          "size": "S2",
+          "height_range_cm": [
+            155,
+            165
+          ],
+          "reach": 432,
+          "stack": 617,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.2,
+          "head_tube_length": 105,
+          "seat_tube_length": 390,
+          "chainstay_length": 442,
+          "wheelbase": 1200,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 760,
+          "fork_offset": 44,
+          "trail": 130
+        },
+        {
+          "size": "S3",
+          "height_range_cm": [
+            163,
+            173
+          ],
+          "reach": 452,
+          "stack": 626,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.7,
+          "head_tube_length": 115,
+          "seat_tube_length": 405,
+          "chainstay_length": 442,
+          "wheelbase": 1225,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 784,
+          "fork_offset": 44,
+          "trail": 130
+        },
+        {
+          "size": "S4",
+          "height_range_cm": [
+            173,
+            183
+          ],
+          "reach": 477,
+          "stack": 635,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.2,
+          "head_tube_length": 125,
+          "seat_tube_length": 425,
+          "chainstay_length": 442,
+          "wheelbase": 1255,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 814,
+          "fork_offset": 44,
+          "trail": 130
+        },
+        {
+          "size": "S5",
+          "height_range_cm": [
+            182,
+            193
+          ],
+          "reach": 502,
+          "stack": 644,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.2,
+          "head_tube_length": 135,
+          "seat_tube_length": 445,
+          "chainstay_length": 442,
+          "wheelbase": 1284,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 843,
+          "fork_offset": 44,
+          "trail": 130
+        },
+        {
+          "size": "S6",
+          "height_range_cm": [
+            190,
+            202
+          ],
+          "reach": 532,
+          "stack": 653,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.2,
+          "head_tube_length": 145,
+          "seat_tube_length": 465,
+          "chainstay_length": 442,
+          "wheelbase": 1318,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 878,
+          "fork_offset": 44,
+          "trail": 130
+        }
+      ]
+    },
+    {
+      "id": "specialized_turbo_levo_gen4_2025_mx_stock",
+      "brand": "Specialized",
+      "model": "Turbo Levo",
+      "generation": "Gen 4",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Specialized Turbo 3.1",
+      "motor_nm": 101,
+      "battery_wh_default": 840,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "stock",
+      "chainstay_length_mm": 435,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Independent adjustments: chainstay 435/444mm, BB ±6mm, HTA ±1° via headset. 840Wh standard.",
+      "sizes": [
+        {
+          "size": "S1",
+          "height_range_cm": [
+            148,
+            160
+          ],
+          "reach": 407,
+          "stack": 609,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 435,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "S2",
+          "height_range_cm": [
+            155,
+            165
+          ],
+          "reach": 435,
+          "stack": 618,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 435,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "S3",
+          "height_range_cm": [
+            163,
+            173
+          ],
+          "reach": 455,
+          "stack": 626,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 435,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "S4",
+          "height_range_cm": [
+            173,
+            183
+          ],
+          "reach": 480,
+          "stack": 638,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 435,
+          "wheelbase": 1254,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "S5",
+          "height_range_cm": [
+            182,
+            193
+          ],
+          "reach": 505,
+          "stack": 652,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 435,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "S6",
+          "height_range_cm": [
+            190,
+            202
+          ],
+          "reach": 535,
+          "stack": 667,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 435,
+          "bb_height": 350,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "santa_cruz_heckler_2023_mx_low",
+      "brand": "Santa Cruz",
+      "model": "Heckler",
+      "generation": "Gen 3 (2023)",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Shimano EP8",
+      "motor_nm": 85,
+      "battery_wh_default": 720,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "chainstay_length_mm": 446,
+      "data_confidence": "high",
+      "notes": "Discontinued after 2024, replaced by Vala in 2025. S size 27.5 only.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            154,
+            165
+          ],
+          "wheel_config_override": "27.5",
+          "reach": 427,
+          "stack": 609,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.7,
+          "head_tube_length": 130,
+          "top_tube_length": 572,
+          "seat_tube_length": 390,
+          "chainstay_length": 446,
+          "wheelbase": 1207,
+          "bb_height": 342,
+          "front_center": 761,
+          "standover_height": 716
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            175
+          ],
+          "reach": 452,
+          "stack": 618,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.6,
+          "head_tube_length": 100,
+          "top_tube_length": 600,
+          "seat_tube_length": 405,
+          "chainstay_length": 446,
+          "wheelbase": 1227,
+          "bb_height": 342,
+          "front_center": 781,
+          "standover_height": 741
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            185
+          ],
+          "reach": 472,
+          "stack": 632,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.4,
+          "head_tube_length": 115,
+          "top_tube_length": 625,
+          "seat_tube_length": 430,
+          "chainstay_length": 446,
+          "wheelbase": 1253,
+          "bb_height": 342,
+          "front_center": 807,
+          "standover_height": 740
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            193
+          ],
+          "reach": 492,
+          "stack": 650,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.7,
+          "head_tube_length": 135,
+          "top_tube_length": 646,
+          "seat_tube_length": 460,
+          "chainstay_length": 446,
+          "wheelbase": 1282,
+          "bb_height": 342,
+          "front_center": 836,
+          "standover_height": 737
+        },
+        {
+          "size": "XXL",
+          "height_range_cm": [
+            193,
+            200
+          ],
+          "reach": 517,
+          "stack": 668,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 76.8,
+          "head_tube_length": 155,
+          "top_tube_length": 675,
+          "seat_tube_length": 500,
+          "chainstay_length": 446,
+          "wheelbase": 1315,
+          "bb_height": 342,
+          "front_center": 869,
+          "standover_height": 738
+        }
+      ]
+    },
+    {
+      "id": "santa_cruz_vala_2025_mx_low",
+      "brand": "Santa Cruz",
+      "model": "Vala",
+      "generation": "Gen 1",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 600,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Replaces Heckler. First SCB bike with Horst-link. Size-specific chainstays 440-451mm. 5 sizes S-XXL.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            154,
+            165
+          ],
+          "reach": 432,
+          "stack": 626,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 440,
+          "bb_height": 340,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            163,
+            175
+          ],
+          "reach": 457,
+          "stack": null,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 443,
+          "bb_height": 340,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            173,
+            185
+          ],
+          "reach": 477,
+          "stack": 644,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 443,
+          "wheelbase": 1268,
+          "bb_height": 340,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            183,
+            193
+          ],
+          "reach": 497,
+          "stack": null,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 447,
+          "bb_height": 340,
+          "fork_offset": 44
+        },
+        {
+          "size": "XXL",
+          "height_range_cm": [
+            191,
+            201
+          ],
+          "reach": 522,
+          "stack": 671,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 451,
+          "bb_height": 340,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "trek_rail_gen4_2023_29_high",
+      "brand": "Trek",
+      "model": "Rail",
+      "generation": "Gen 4",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX (Smart System)",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "high",
+      "chainstay_length_mm": 447,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Mino Link flip chip: High (shipped) or Low (-0.4° HTA, -5mm BB). Replaced by Rail+ Gen 5 in 2025.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            170
+          ],
+          "reach": 436,
+          "stack": 625,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.1,
+          "head_tube_length": 105,
+          "top_tube_length": 579,
+          "seat_tube_length": 410,
+          "chainstay_length": 447,
+          "wheelbase": 1213,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 767,
+          "standover_height": 761,
+          "fork_offset": 44,
+          "trail": 132
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            168,
+            180
+          ],
+          "reach": 456,
+          "stack": 629,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.1,
+          "head_tube_length": 110,
+          "top_tube_length": 600,
+          "seat_tube_length": 420,
+          "chainstay_length": 447,
+          "wheelbase": 1236,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 790,
+          "standover_height": 773,
+          "fork_offset": 44,
+          "trail": 131
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            178,
+            190
+          ],
+          "reach": 491,
+          "stack": 643,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.1,
+          "head_tube_length": 125,
+          "top_tube_length": 638,
+          "seat_tube_length": 450,
+          "chainstay_length": 447,
+          "wheelbase": 1277,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 831,
+          "standover_height": 770,
+          "fork_offset": 44,
+          "trail": 132
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            187,
+            200
+          ],
+          "reach": 521,
+          "stack": 656,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.1,
+          "head_tube_length": 140,
+          "top_tube_length": 671,
+          "seat_tube_length": 500,
+          "chainstay_length": 447,
+          "wheelbase": 1313,
+          "bb_drop": 27,
+          "bb_height": 350,
+          "front_center": 867,
+          "standover_height": 768,
+          "fork_offset": 44,
+          "trail": 132
+        }
+      ]
+    },
+    {
+      "id": "trek_rail_plus_gen5_2025_mx_low",
+      "brand": "Trek",
+      "model": "Rail+",
+      "generation": "Gen 5",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 160,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "chainstay_length_mm": 448,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "New platform 2025. S size full 27.5. 40mm reach gap between M and L — no ML. BB 338mm low confirmed.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            167
+          ],
+          "wheel_config_override": "27.5",
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 448,
+          "bb_height": 338,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 450,
+          "stack": 627,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 448,
+          "wheelbase": 1230,
+          "bb_height": 338,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 490,
+          "stack": null,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 448,
+          "bb_height": 338,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.2,
+          "chainstay_length": 448,
+          "bb_height": 338,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "giant_reign_eplus_2023_mx_mid",
+      "brand": "Giant",
+      "model": "Reign E+",
+      "generation": "Gen 2023",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Giant SyncDrive Pro 2",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 160,
+      "suspension_travel_fork_mm": 170,
+      "geo_setting": "mid",
+      "chainstay_length_mm": 454,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "3-position flip chip: Low 63.5°/Mid 63.9°(shipped)/High 64.2°. ±5mm reach via headset cup.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            158,
+            170
+          ],
+          "reach": 430,
+          "stack": null,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 78.7,
+          "chainstay_length": 454,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            168,
+            180
+          ],
+          "reach": 460,
+          "stack": null,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 78.7,
+          "seat_tube_length": 450,
+          "chainstay_length": 454,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            178,
+            190
+          ],
+          "reach": 480,
+          "stack": null,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 78.7,
+          "chainstay_length": 454,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            188,
+            200
+          ],
+          "reach": 510,
+          "stack": null,
+          "head_tube_angle": 63.9,
+          "seat_tube_angle_effective": 78.7,
+          "chainstay_length": 454,
+          "wheelbase": 1303,
+          "bb_drop": 30,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "giant_reign_advanced_eplus_2026_mx_mid",
+      "brand": "Giant",
+      "model": "Reign Advanced E+",
+      "generation": "Gen 1 (2026 carbon)",
+      "years": [
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Giant SyncDrive Pro 3 (48V)",
+      "motor_nm": 90,
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 160,
+      "suspension_travel_fork_mm": 170,
+      "geo_setting": "mid",
+      "chainstay_length_mm": 450,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "3-position flip chip Low 63.1°/Mid 63.5°(shipped)/High 63.9°. Plus ±5mm headset cup. Carbon only 2026.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            158,
+            170
+          ],
+          "reach": 430,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 450,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            168,
+            180
+          ],
+          "reach": 460,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 450,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            178,
+            190
+          ],
+          "reach": 480,
+          "stack": 667,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 450,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            188,
+            200
+          ],
+          "reach": 510,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 450,
+          "bb_drop": 30,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "mondraker_crafty_carbon_2025_29_standard",
+      "brand": "Mondraker",
+      "model": "Crafty Carbon",
+      "generation": "Gen 3 (2025)",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "5 sizes inc new ML. Size-specific CS: S/M/ML=455mm, L/XL=465mm. 29\" only.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 445,
+          "stack": 638,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.95,
+          "head_tube_length": 120,
+          "top_tube_length": 581,
+          "seat_tube_length": 380,
+          "chainstay_length": 455,
+          "wheelbase": 1240,
+          "bb_drop": 25,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 460,
+          "stack": 638,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.95,
+          "head_tube_length": 120,
+          "top_tube_length": 596,
+          "seat_tube_length": 410,
+          "chainstay_length": 455,
+          "wheelbase": 1255,
+          "bb_drop": 25,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "ML",
+          "height_range_cm": [
+            173,
+            185
+          ],
+          "reach": 480,
+          "stack": 647,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.95,
+          "head_tube_length": 130,
+          "top_tube_length": 618,
+          "seat_tube_length": 435,
+          "chainstay_length": 455,
+          "wheelbase": 1280,
+          "bb_drop": 25,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            182,
+            193
+          ],
+          "reach": 500,
+          "stack": 656,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.95,
+          "head_tube_length": 140,
+          "top_tube_length": 640,
+          "seat_tube_length": 460,
+          "chainstay_length": 465,
+          "wheelbase": 1314,
+          "bb_drop": 25,
+          "bb_height": 350,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            190,
+            202
+          ],
+          "reach": 520,
+          "stack": 665,
+          "head_tube_angle": 64.5,
+          "seat_tube_angle_effective": 77.95,
+          "head_tube_length": 150,
+          "top_tube_length": 662,
+          "seat_tube_length": 490,
+          "chainstay_length": 465,
+          "wheelbase": 1338,
+          "bb_drop": 25,
+          "bb_height": 350,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "mondraker_crafty_carbon_2023_29_standard",
+      "brand": "Mondraker",
+      "model": "Crafty Carbon",
+      "generation": "Gen 2 (pre-2025)",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 455,
+      "fork_offset_mm": 44,
+      "data_confidence": "low",
+      "notes": "65.5° HTA — 1° steeper than 2025 redesign. 4 sizes only. Per-size reaches not confirmed from manufacturer.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 455,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 455,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 455,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 455,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "orbea_wild_2023_mx_standard",
+      "brand": "Orbea",
+      "model": "Wild",
+      "generation": "Gen 2 (2023)",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX",
+      "motor_nm": 85,
+      "battery_wh_default": 625,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 170,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 448,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "No flip chip — fixed geometry. Mullet conversion via different upper rocker link.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 435,
+          "stack": 621,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 455,
+          "stack": 630,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "wheelbase": 1252,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 480,
+          "stack": 639,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "seat_tube_length": 435,
+          "chainstay_length": 448,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 505,
+          "stack": 648,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "orbea_wild_2025_mx_standard",
+      "brand": "Orbea",
+      "model": "Wild",
+      "generation": "Gen 3 (2025)",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 170,
+      "suspension_travel_fork_mm": 170,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 448,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "1° slacker HTA vs Gen 2 (63.5° vs 64.0°). 170mm fork vs 160mm. Same chainstay and reaches as Gen 2.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 435,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 455,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "wheelbase": 1252,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 480,
+          "stack": 643,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 505,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "chainstay_length": 448,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "pivot_shuttle_am_2024_29_low",
+      "brand": "Pivot",
+      "model": "Shuttle AM",
+      "generation": "Gen 1",
+      "years": [
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 148,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "chainstay_length_mm": 444,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Flip chip: Low 64.1°/High 64.5°. 157mm Super Boost. DW-Link suspension. Mullet conversion in High only.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 431,
+          "stack": null,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.4,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 461,
+          "stack": null,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.4,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 476,
+          "stack": 647,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.4,
+          "chainstay_length": 444,
+          "wheelbase": 1269,
+          "bb_height": 345,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 496,
+          "stack": null,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.4,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "pivot_shuttle_am_gen2_2025_29_low",
+      "brand": "Pivot",
+      "model": "Shuttle AM",
+      "generation": "Gen 2",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX Race Edition Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "chainstay_length_mm": 444,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Same frame reaches as Gen 1. Bosch CX Gen 5 Race Edition, larger 800Wh battery. 157mm Super Boost.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 431,
+          "stack": null,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 461,
+          "stack": null,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 476,
+          "stack": 651,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 496,
+          "stack": null,
+          "head_tube_angle": 64.1,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 444,
+          "bb_height": 345,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "forbidden_druid_e_2026_mx_standard",
+      "brand": "Forbidden",
+      "model": "Druid E",
+      "generation": "Gen 2 (2026)",
+      "years": [
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "DJI Avinox M2S (T1/T2) or M2 (T3/T4)",
+      "motor_nm_m2s": 130,
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Consolidates LitE and CorE into single Druid E. Trifecta V3 high-pivot. Proportional sizing — CS grows ~15mm per size.",
+      "sizes": [
+        {
+          "size": "S1",
+          "height_range_cm": [
+            158,
+            168
+          ],
+          "reach": 430,
+          "stack": 628,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 100,
+          "top_tube_length": 578,
+          "seat_tube_length": 400,
+          "chainstay_length": 427,
+          "wheelbase": 1194,
+          "bb_drop": 25,
+          "bb_height": 335.8,
+          "front_center": 767,
+          "standover_height": 745,
+          "fork_offset": 44
+        },
+        {
+          "size": "S2",
+          "height_range_cm": [
+            168,
+            178
+          ],
+          "reach": 447,
+          "stack": 649,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 123,
+          "top_tube_length": 599,
+          "seat_tube_length": 420,
+          "chainstay_length": 442,
+          "wheelbase": 1235,
+          "bb_drop": 25,
+          "bb_height": 335.8,
+          "front_center": 794,
+          "standover_height": 745,
+          "fork_offset": 44
+        },
+        {
+          "size": "S3",
+          "height_range_cm": [
+            178,
+            188
+          ],
+          "reach": 467,
+          "stack": 662,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 138,
+          "top_tube_length": 622,
+          "seat_tube_length": 440,
+          "chainstay_length": 456,
+          "wheelbase": 1276,
+          "bb_drop": 25,
+          "bb_height": 335.8,
+          "front_center": 820,
+          "standover_height": 745,
+          "fork_offset": 44
+        },
+        {
+          "size": "S4",
+          "height_range_cm": [
+            188,
+            198
+          ],
+          "reach": 487,
+          "stack": 676,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 153,
+          "top_tube_length": 646,
+          "seat_tube_length": 470,
+          "chainstay_length": 471,
+          "wheelbase": 1317,
+          "bb_drop": 25,
+          "bb_height": 335.8,
+          "front_center": 847,
+          "standover_height": 745,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "forbidden_dreadnought_e_2026_mx_standard",
+      "brand": "Forbidden",
+      "model": "Dreadnought E",
+      "generation": "Gen 1 (2026)",
+      "years": [
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "DJI Avinox M2S (T1/T2) or M2 (T3/T4)",
+      "motor_nm_m2s": 130,
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 170,
+      "suspension_travel_fork_mm": 180,
+      "geo_setting": "standard",
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Big-travel sibling to Druid E. 1° slacker HTA (63° vs 64°). Higher BB (340.8mm vs 335.8mm). Proportional sizing.",
+      "sizes": [
+        {
+          "size": "S1",
+          "height_range_cm": [
+            158,
+            168
+          ],
+          "reach": 425,
+          "stack": 635,
+          "head_tube_angle": 63.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 100,
+          "top_tube_length": 575,
+          "seat_tube_length": 400,
+          "chainstay_length": 434,
+          "wheelbase": 1215.5,
+          "bb_drop": 20,
+          "bb_height": 340.8,
+          "front_center": 782,
+          "standover_height": 720,
+          "fork_offset": 44
+        },
+        {
+          "size": "S2",
+          "height_range_cm": [
+            168,
+            178
+          ],
+          "reach": 445,
+          "stack": 648,
+          "head_tube_angle": 63.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 115,
+          "top_tube_length": 598,
+          "seat_tube_length": 420,
+          "chainstay_length": 449,
+          "wheelbase": 1256.9,
+          "bb_drop": 20,
+          "bb_height": 340.8,
+          "front_center": 808,
+          "standover_height": 720,
+          "fork_offset": 44
+        },
+        {
+          "size": "S3",
+          "height_range_cm": [
+            178,
+            188
+          ],
+          "reach": 461,
+          "stack": 669,
+          "head_tube_angle": 63.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 138,
+          "top_tube_length": 619,
+          "seat_tube_length": 440,
+          "chainstay_length": 463,
+          "wheelbase": 1298.2,
+          "bb_drop": 20,
+          "bb_height": 340.8,
+          "front_center": 835,
+          "standover_height": 720,
+          "fork_offset": 44
+        },
+        {
+          "size": "S4",
+          "height_range_cm": [
+            188,
+            198
+          ],
+          "reach": 481,
+          "stack": 682,
+          "head_tube_angle": 63.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": 153,
+          "top_tube_length": 642,
+          "seat_tube_length": 470,
+          "chainstay_length": 478,
+          "wheelbase": 1339.5,
+          "bb_drop": 20,
+          "bb_height": 340.8,
+          "front_center": 861,
+          "standover_height": 720,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "canyon_spectral_on_cf_2022_mx_low",
+      "brand": "Canyon",
+      "model": "Spectral:ON CF",
+      "generation": "Gen 1",
+      "years": [
+        2022,
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Shimano EP801",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 155,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "low",
+      "chainstay_length_mm": 437,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "Recalled Nov 2022 (battery fire risk); relaunched 2025 with aluminium-housed 800Wh battery and EP801. Frame geometry unchanged. Horst-link 4-bar suspension.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            170
+          ],
+          "reach": 435,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 437,
+          "bb_height": 334,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            180
+          ],
+          "reach": 460,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 437,
+          "bb_height": 334,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            190
+          ],
+          "reach": 485,
+          "stack": 652,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 437,
+          "wheelbase": 1252,
+          "bb_height": 334,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            200
+          ],
+          "reach": 510,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 437,
+          "bb_height": 334,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "scott_patron_eride_gen1_2022_29_standard",
+      "brand": "Scott",
+      "model": "Patron eRIDE",
+      "generation": "Gen 1 (2022)",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX (Smart System)",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 160,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 454,
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "Shock hidden inside top tube. Scott TwinLoc 2 remote: 3 suspension modes. Carbon front triangle + alloy rear. Replaced by Gen 2 in 2025.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 433,
+          "stack": 635,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 76.9,
+          "chainstay_length": 454,
+          "bb_height": 347,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 446,
+          "stack": 642,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 76.9,
+          "seat_tube_length": 440,
+          "chainstay_length": 454,
+          "bb_height": 347,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 474,
+          "stack": 651,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 76.9,
+          "seat_tube_length": 470,
+          "chainstay_length": 454,
+          "bb_height": 347,
+          "bb_drop": 30,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 501,
+          "stack": 660,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 76.9,
+          "chainstay_length": 454,
+          "bb_height": 347,
+          "bb_drop": 30,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "scott_patron_eride_gen2_2025_29_standard",
+      "brand": "Scott",
+      "model": "Patron eRIDE",
+      "generation": "Gen 2 (2025)",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 150,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 454,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "Completely new chassis — shock integrated upside-down in downtube. Adjustable headset ±0.6°. Per-size reach not confirmed from manufacturer.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.8,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 454,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.8,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 454,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.8,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 454,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.8,
+          "seat_tube_angle_effective": null,
+          "chainstay_length": 454,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "cannondale_moterra_neo_carbon_2022_29_standard",
+      "brand": "Cannondale",
+      "model": "Moterra Neo Carbon",
+      "generation": "Gen 2022",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX (Smart System)",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 150,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 455,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "Proportional Response Tuned — size-specific suspension kinematics and CS. S size uses 27.5 rear wheel. Carbon front, alloy rear.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "wheel_config_override": "29-27.5",
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": null,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 455,
+          "stack": null,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 77.0,
+          "seat_tube_length": 430,
+          "chainstay_length": 455,
+          "wheelbase": 1235,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": null,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.0,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": null,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "cannondale_moterra_neo_carbon_lt_2022_mx_standard",
+      "brand": "Cannondale",
+      "model": "Moterra Neo Carbon LT",
+      "generation": "Gen 2022",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor": "Bosch Performance Line CX (Smart System)",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 165,
+      "suspension_travel_fork_mm": 170,
+      "geo_setting": "standard",
+      "chainstay_length_mm": 452,
+      "fork_offset_mm": 44,
+      "data_confidence": "medium",
+      "notes": "Long-travel sibling. HTA 64°, STA 76.5°. CS 452mm all sizes. L reach=476, stack=642, BB=356, wheelbase=1276 confirmed.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 452,
+          "bb_height": 356,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 452,
+          "bb_height": 356,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 476,
+          "stack": 642,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 452,
+          "wheelbase": 1276,
+          "bb_height": 356,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.5,
+          "chainstay_length": 452,
+          "bb_height": 356,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "cannondale_moterra_sl_2024_mx_standard",
+      "brand": "Cannondale",
+      "model": "Moterra SL",
+      "generation": "Gen 1 (2024)",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor": "Shimano EP801",
+      "motor_nm": 85,
+      "battery_wh_default": 601,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "fork_offset_mm": 44,
+      "data_confidence": "high",
+      "notes": "FlexPivot carbon chainstay acts as Horst-link. Extremely slack 62.5° HTA. Proportional sizing — size-specific CS. 601Wh. ~19.5-20.6kg.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 420,
+          "stack": 630,
+          "head_tube_angle": 62.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 449,
+          "fork_offset": 44
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 445,
+          "stack": 639,
+          "head_tube_angle": 62.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 453,
+          "fork_offset": 44
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 470,
+          "stack": 648,
+          "head_tube_angle": 62.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 453,
+          "fork_offset": 44
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 505,
+          "stack": 657,
+          "head_tube_angle": 62.5,
+          "seat_tube_angle_effective": 77.0,
+          "chainstay_length": 458,
+          "fork_offset": 44
+        }
+      ]
+    },
+    {
+      "id": "forbidden_druid_core_2025_mx_standard",
+      "brand": "Forbidden",
+      "model": "Druid CorE",
+      "generation": "Gen 1",
+      "years": [
+        2025
+      ],
+      "category": "EMTB",
+      "motor_class": "full-power",
+      "motor": "DJI Avinox M1",
+      "motor_nm": 105,
+      "motor_nm_boost": 120,
+      "battery_wh_options": [
+        600,
+        800
+      ],
+      "battery_wh_default": 800,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "geo_adjustability": "No flip chip — fixed geometry. No geo adjustment available.",
+      "chainstay_length_by_size": {
+        "S1": 427,
+        "S2": 442,
+        "S3": 456,
+        "S4": 471
+      },
+      "fork_offset_mm": 44,
+      "source_url": "https://theloamwolf.com/emtb/first-ride-forbidden-druid-e-core-lite/",
+      "data_confidence": "high",
+      "notes": "Trifecta V3 high-pivot four-bar suspension. Proportional (OneRide) sizing. Shock: 210x55mm. Replaced by unified 'Druid E' in 2026. 150mm crank arms.",
+      "sizes": [
+        {
+          "size": "S1",
+          "height_range_cm": [
+            158,
+            168
+          ],
+          "reach": 430,
+          "stack": 628,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 427,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 427,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "S2",
+          "height_range_cm": [
+            168,
+            178
+          ],
+          "reach": 447,
+          "stack": 649,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 442,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 442,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "S3",
+          "height_range_cm": [
+            178,
+            188
+          ],
+          "reach": 467,
+          "stack": 662,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 456,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 456,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "S4",
+          "height_range_cm": [
+            188,
+            198
+          ],
+          "reach": 487,
+          "stack": 676,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 76.75,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 471,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 471,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        }
+      ]
+    },
+    {
+      "id": "forbidden_druid_lite_2025_mx_standard",
+      "brand": "Forbidden",
+      "model": "Druid LitE",
+      "generation": "Gen 1",
+      "years": [
+        2025
+      ],
+      "category": "EMTB",
+      "motor_class": "full-power",
+      "motor": "DJI Avinox M1",
+      "motor_nm": 105,
+      "motor_nm_boost": 120,
+      "battery_wh_options": [
+        600,
+        800
+      ],
+      "battery_wh_default": 600,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 140,
+      "suspension_travel_fork_mm": 150,
+      "geo_setting": "standard",
+      "geo_adjustability": "No flip chip — fixed geometry.",
+      "chainstay_length_by_size": {
+        "S1": 427,
+        "S2": 442,
+        "S3": 456,
+        "S4": 471
+      },
+      "fork_offset_mm": 44,
+      "source_url": "https://theloamwolf.com/emtb/first-ride-forbidden-druid-e-core-lite/",
+      "data_confidence": "medium",
+      "notes": "Shares same frame as Druid CorE. Shorter shock (50mm vs 55mm) for 140mm travel, 600Wh battery, 150mm fork vs 160mm. Reaches 7mm longer than CorE throughout range. S3 reach confirmed at 474mm. Replaced by 'Druid E' in 2026.",
+      "sizes": [
+        {
+          "size": "S1",
+          "height_range_cm": [
+            158,
+            168
+          ],
+          "reach": 437,
+          "stack": null,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.4,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 427,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 427,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "S2",
+          "height_range_cm": [
+            168,
+            178
+          ],
+          "reach": 455,
+          "stack": null,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.4,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 442,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 442,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null,
+          "notes": "S2 reach estimated at 455mm — not confirmed from manufacturer"
+        },
+        {
+          "size": "S3",
+          "height_range_cm": [
+            178,
+            188
+          ],
+          "reach": 474,
+          "stack": null,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.4,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 456,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 456,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "S4",
+          "height_range_cm": [
+            188,
+            198
+          ],
+          "reach": 493,
+          "stack": null,
+          "head_tube_angle": 64.6,
+          "seat_tube_angle_effective": 77.4,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 471,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 471,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        }
+      ]
+    },
+    {
+      "id": "orbea_wild_2023_mx_low",
+      "brand": "Orbea",
+      "model": "Wild (MX)",
+      "generation": "Gen 2 (2023) MX config",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor_class": "full-power",
+      "motor": "Bosch Performance Line CX / CX Race",
+      "motor_nm": 85,
+      "battery_wh_default": 625,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 170,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "geo_adjustability": "No flip chip. Fixed geometry. Mullet (MX) conversion via different upper rocker link.",
+      "chainstay_length_mm": 448,
+      "fork_offset_mm": 44,
+      "source_url": "https://blisterreview.com/gear-reviews/2025-orbea-wild",
+      "data_confidence": "medium",
+      "notes": "MX config geometry: chainstays remain 448mm. Reaches and stacks same as 29\" for all sizes. Wheelbase M ≈ 1252mm. MyO configurator allows custom spec/paint.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 435,
+          "stack": 621,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 455,
+          "stack": 630,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": 1252,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 480,
+          "stack": 639,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": 435,
+          "chainstay_length": 448,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 505,
+          "stack": 648,
+          "head_tube_angle": 64.0,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        }
+      ]
+    },
+    {
+      "id": "orbea_wild_2025_mx_low",
+      "brand": "Orbea",
+      "model": "Wild (MX)",
+      "generation": "Gen 3 (2025) MX config",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor_class": "full-power",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_options": [
+        600,
+        750
+      ],
+      "battery_wh_default": 750,
+      "wheel_config": "29-27.5",
+      "suspension_travel_rear_mm": 170,
+      "suspension_travel_fork_mm": 170,
+      "geo_setting": "standard",
+      "geo_adjustability": "No flip chip. Fixed geometry. Mullet (MX) conversion via different upper rocker link.",
+      "chainstay_length_mm": 448,
+      "fork_offset_mm": 44,
+      "source_url": "https://blisterreview.com/gear-reviews/2025-orbea-wild",
+      "data_confidence": "medium",
+      "notes": "1° slacker HTA vs Gen 2 (63.5° vs 64.0°). 170mm fork vs 160mm. Same chainstay 448mm. Reaches unchanged from Gen 2.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": 435,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": 455,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": 1252,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": 480,
+          "stack": 643,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": 505,
+          "stack": null,
+          "head_tube_angle": 63.5,
+          "seat_tube_angle_effective": 77.5,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 448,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 448,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        }
+      ]
+    },
+    {
+      "id": "mondraker_crafty_carbon_2023_29_low",
+      "brand": "Mondraker",
+      "model": "Crafty Carbon",
+      "generation": "Gen 2 (pre-2025)",
+      "years": [
+        2023,
+        2024
+      ],
+      "category": "EMTB",
+      "motor_class": "full-power",
+      "motor": "Bosch Performance Line CX",
+      "motor_nm": 85,
+      "battery_wh_default": 750,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 160,
+      "geo_setting": "standard",
+      "geo_adjustability": "Flip chip at lower shock mount: Standard (65.5°) and Low (65.15°, 5mm lower BB, 4mm shorter reach).",
+      "chainstay_length_mm": 455,
+      "fork_offset_mm": 44,
+      "source_url": null,
+      "data_confidence": "low",
+      "notes": "Pre-2025 generation. 65.5° HTA is 1° steeper than 2025 redesign. 4 sizes only (S,M,L,XL — no ML). Specific size reaches NOT confirmed from manufacturer. Retained for historical comparison.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 455,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 455,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 455,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 455,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 455,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 455,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 65.5,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 455,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 455,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        }
+      ]
+    },
+    {
+      "id": "scott_patron_eride_gen2_st_2025_29_standard",
+      "brand": "Scott",
+      "model": "Patron eRIDE ST",
+      "generation": "Gen 2 ST (2025)",
+      "years": [
+        2025,
+        2026
+      ],
+      "category": "EMTB",
+      "motor_class": "full-power",
+      "motor": "Bosch Performance Line CX Gen 5",
+      "motor_nm": 85,
+      "battery_wh_default": 800,
+      "wheel_config": "29",
+      "suspension_travel_rear_mm": 150,
+      "suspension_travel_fork_mm": 170,
+      "geo_setting": "standard",
+      "geo_adjustability": "Same ±0.6° adjustable headset as 900 series. Longer fork (170mm vs 150mm) slackens HTA to 64.9° vs 65.8°.",
+      "chainstay_length_mm": 454,
+      "fork_offset_mm": 44,
+      "source_url": "https://www.pinkbike.com/news/first-look-scott-patron-emtb-wins-integration-bingo.html",
+      "data_confidence": "medium",
+      "notes": "Same frame as 900 series — only fork length differs (170mm vs 150mm), slackening HTA to 64.9°. ST = Super Trail. Piggyback shock. Geometry values (reach/stack) same frame as 900 series.",
+      "sizes": [
+        {
+          "size": "S",
+          "height_range_cm": [
+            155,
+            168
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.9,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 454,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 454,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "M",
+          "height_range_cm": [
+            165,
+            178
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.9,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 454,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 454,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "L",
+          "height_range_cm": [
+            175,
+            188
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.9,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 454,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 454,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        },
+        {
+          "size": "XL",
+          "height_range_cm": [
+            185,
+            198
+          ],
+          "reach": null,
+          "stack": null,
+          "head_tube_angle": 64.9,
+          "seat_tube_angle_effective": null,
+          "head_tube_length": null,
+          "top_tube_length": null,
+          "seat_tube_length": null,
+          "chainstay_length": 454,
+          "wheelbase": null,
+          "bb_drop": null,
+          "bb_height": null,
+          "front_center": null,
+          "rear_center": 454,
+          "standover_height": null,
+          "fork_offset": 44,
+          "trail": null
+        }
+      ]
+    }
+  ]
 }
