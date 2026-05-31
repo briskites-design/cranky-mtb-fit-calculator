@@ -84,7 +84,7 @@
 <script>
 (function() {
   var SUPABASE_URL = 'https://nlhopparlchwyunehhyl.supabase.co';
-  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5saG9wcGFybGNod3l1bmVoaHlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAwMzA0MjEsImV4cCI6MjA5NTYwNjQyMX0.vdH8zei0dA8kbRgVUFUCGhW7GQMIFsGSNz3fw4uA1LA';
+  var SUPABASE_KEY = 'sb_publishable_hdm6pfzvGo8mjncmv_73nQ_176pOr1O';
 
   function val(id) {
     var el = document.getElementById(id);
@@ -133,7 +133,6 @@
     var xhr = new XMLHttpRequest();
     xhr.open('POST', SUPABASE_URL + '/rest/v1/bike_submissions', true);
     xhr.setRequestHeader('apikey', SUPABASE_KEY);
-    xhr.setRequestHeader('Authorization', 'Bearer ' + SUPABASE_KEY);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader('Prefer', 'return=minimal');
 
